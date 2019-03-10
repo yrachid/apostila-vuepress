@@ -5,6 +5,73 @@ date: '2018-12-19 13:25:06 -0700'
 
 # Orientação a Objetos
 
+### Registro de jogadoras de futebol
+
+Por padrão, 12 registros
+  - nome
+  - idade
+  - posição
+
+### 3 Arrays de doze posições
+
+Criando uma classe Jogadora
+
+É muito incômodo ter de lidar com três Arrays de dados ao mesmo tempo. Temos que nos basear em índices, o que é inseguro e difícil de entender (caso tenhamos um bug no programa). Podemos melhorar nosso programa com o uso de orientação a objetos. Neste caso, podemos criar uma classe para representar a entidade Jogadora. 
+
+```java
+public class Jogadora {
+  String nome;
+  int idade;
+  String posicao;
+}
+```
+
+Mas, e os objetos?
+
+O paradigma se chama orientação a objetos, mas até agora, não falamos em nenhum momento dos tais objetos. 
+
+```java
+Jogadora marta;
+
+System.out.println(marta);
+```
+
+Saída:
+
+```
+null
+```
+
+
+Instâncias
+
+Referências
+
+Desenho das variáveis (copos e controles)
+
+Recriando programa usando objetos
+
+
+```java
+Jogadora[] jogadoras = new Jogadora [12];
+```
+
+
+### Registrar inúmeras jogadoras 
+
+Nosso programa debe permitir un número indeifinido de cadastros. Qual a melhor maneira de solucionar isto? Criar um Array com um tamanho absurdo que dificilmente será esgotado? Pode ser uma solução, mas ainda assim, muito complexa e altamente propensa a bugs
+
+
+### Trocando os Arrays por listas
+
+Listas sao similares aos Arrays. Servem para armazenar múltiplos valores. A diferença fundamental entre as duas estruturas é a de que as listas podem ser expandidas automaticamente, ou seja, elas não possuem um tamanho fixo. Podemos adicionar quantos itens quisermos em uma lista (até esgotarmos o espaço em memória, se for o caso).
+
+ArrayList<Jogadora> jogadoras = new ArrayList<>();
+
+A sintaxe dos diamantes
+
+Você deve ter percebido que utilizamos <String> na hora de instanciar a lista
+
 ### Classes
 
 No Java o seu código sempre será escrito dentro de classes e métodos. Uma classe é um elemento do código Java que utilizamos para representar objetos do mundo real. Na orientação a objetos, sempre tentamos pensar em como abstrair conceitos do mundo real dentro do código.
